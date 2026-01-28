@@ -59,6 +59,9 @@
                             <h3>{{$tour->title}}</h3>
                             <p>{{$tour->date}}</p>
                             <p>{{$tour->price}} &#8381;</p>
+                            @auth
+                                <a class="flex justify-center items-center bg-blue-400 w-full h-8 hover:bg-blue-600" href="{{ route('orders.create', $tour) }}">Забронировать</a>
+                            @endauth
                         </div>
                     @endforeach
                 </div>
